@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Tutoring{% endblock %}
+
+{% block content %}
+<div class="header tutoring-header">
+    <div class="tutoring-header-container">
+        <h1 class="title tutoring-title">Tutoring</h1>
+        <h2 class="header-subtitle tutoring-subtitle">Learn the basics of coding!</h2>
+    </div>
+</div>
+
+<div class="general-light-outer">
+    <div class="tutoring-column-inner">
+        <div class="tutoring-content-col">
+            <div class="tutoring-content-container">
+                <h2 class="subtitle">Programs</h2>
+                <p class="normal" id="tutoring-content-text">
+                    With our partnership with PPIS, we have completed 2 10-week tutoring programs. The kids have currently gone through our Scratch and Java Level 1 programs
+                    and soon will be going through our Java Level 2 Program. If your organization would like to work with us, please contact us!
+                </p>
+                <a class="normal tutoring-about-link" href="{% url "home:contact_view" %}">
+                    Work with us
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="tutoring-image-col">
+            <div class="tutoring-image-container">
+                <img src="{% static 'home/images/tutoring-main-image.png' %}"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="general-light-outer tutoring-slide-outer">
+    <div class="tutoring-slide-mask">
+    <div class="tutoring-slide-container">
+        
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-1.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-2.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-3.jpg' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-4.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-5.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-6.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-7.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-8.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/tutoring-image-9.JPG' %}"/>
+        </div>
+        
+    </div>
+    </div>
+    
+    
+    <!-- Next and previous buttons -->
+    <div class="arrow prev" onclick="minusSlide()">
+        <span class="fa fa-angle-left tutoring-arrow">
+            <span class="left-arrow-line"></span></span>
+      </div>
+    <div class="arrow next" onclick="plusSlide()">
+        <span class="fa fa-angle-right tutoring-arrow">
+            <span class="right-arrow-line"></span>
+        </span>
+      </div>
+</div>
+
+<div class="general-light-outer tutoring-steps-background">
+    <div class="tutoring-steps-container">
+        <div class="tutoring-steps-item">
+            <h2 class="tutoring-steps-subtitle subtitle">Scratch Level 1</h2>
+            <div class="tutoring-steps-list">
+                <div class="tutoring-steps-number">
+                    <h3>1</h3>
+                </div>
+            </div>
+            <p class="tutoring-steps-info normal">
+                Learn the basics of code through Scratch! A fun, interactive course anyone can learn.
+            </p>
+        </div>
+        <!--for the line-->
+        <div class="tutoring-steps-line-item">
+            <h2 class="tutoring-steps-subtitle"></h2>
+            <div class="tutoring-steps-list">
+                    <div class="tutoring-steps-line"></div>
+            </div>
+            <p class="tutoring-steps-info">
+            </p>
+        </div>
+        <div class="tutoring-steps-item">
+            <h2 class="tutoring-steps-subtitle subtitle">Java Level 1</h2>
+            <div class="tutoring-steps-list">
+                <div class="tutoring-steps-number">
+                    <h3>2</h3>
+                </div>
+            </div>
+            <p class="tutoring-steps-info normal">
+                We cover the basics of a coding language that is widely used throughout the world.
+            </p>
+        </div>
+        <!--for the line-->
+        <div class="tutoring-steps-line-item">
+            <h2 class="tutoring-steps-subtitle"></h2>
+            <div class="tutoring-steps-list">
+                    <div class="tutoring-steps-line"></div>
+            </div>
+            <p class="tutoring-steps-info">
+            </p>
+        </div>
+        <div class="tutoring-steps-item">
+            <h2 class="tutoring-steps-subtitle subtitle">Java Level 2</h2>
+            <div class="tutoring-steps-list">
+                <div class="tutoring-steps-number">
+                    <h3>3</h3>
+                </div>
+            </div>
+            <p class="tutoring-steps-info normal">
+                More advanced concepts of Java that will help children develop their coding applications.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="general-light-outer">
+    <div class="contact-us-padding">
+        <h2 class="contact-us-subtitle">
+            Do you want to work with us?
+        </h2>
+        <form action="{% url 'home:contact_view' %}" method="post">
+            {% csrf_token %}
+            <div class="contact-us-input">
+                <input type="text" name="fullname" placeholder="" required>
+                <p class="contact-us-placeholder">Full Name</p>
+            </div>
+            <div class="contact-us-input">
+                <input type="email" name="email" placeholder="" required>
+                <p class="contact-us-placeholder">Email Address</p>
+            </div>
+            <div class="contact-us-large-input">
+                <textarea name="enquiry" class="contact-us-textarea" placeholder="" required></textarea>
+                <p class="contact-us-placeholder">Enquiry</p>
+            </div>
+            <button class="contact-us-button" type="submit" value="send">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

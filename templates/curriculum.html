@@ -1,0 +1,374 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Curriculum{% endblock %}
+
+{% block content %}
+<div class="header curriculum-header">
+    <div class="curriculum-header-container">
+        <h1 class="title curriculum-title">Curriculum</h1>
+        <h2 class="header-subtitle curriculum-subtitle">Flexible, Interactive, Simple</h2>
+    </div>
+</div>
+
+<div class="blank-space"></div>
+
+<div class="general-light-outer">
+<div class="curriculum-provider-inner">
+   <h3 class="subtitle provider">
+        What Our Curriculum Provides?
+   </h3>
+    <div class="curriculum-provider-container">
+        <div class="curriculum-provider-item">
+            <img class="curriculum-provider-image" src="{% static 'home/images/curriculum-coding.png' %}">
+            <h4 class="curriculum-provider-subtitle">Basic Coding Skills</h4>
+            <p class="curriculum-provider-text">
+                Students will learn the basics of Java or Scratch depending on their age. This will be enough for them to start coding independently.
+            </p>
+        </div>
+        <div class="curriculum-provider-item">
+            <img class="curriculum-provider-image" src="{% static 'home/images/curriculum-progression.png' %}">
+            <h4 class="curriculum-provider-subtitle">Progression</h4>
+            <p class="curriculum-provider-text">
+                Our curriculum is a long term program meaning students can continuously progress and learn more about programming.
+            </p>
+        </div>
+        <div class="curriculum-provider-item">
+            <img class="curriculum-provider-image" src="{% static 'home/images/curriculum-hands-on.png' %}">
+            <h4 class="curriculum-provider-subtitle">Hands On Learning</h4>
+            <p class="curriculum-provider-text">
+                Most of our curriculum involves the kids collaborating and coding instead of the teacher talking all the time.
+            </p>
+        </div>
+        <div class="curriculum-provider-item">
+            <img class="curriculum-provider-image" src="{% static 'home/images/curriculum-flexibility.png' %}">
+            <h4 class="curriculum-provider-subtitle">Flexbility</h4>
+            <p class="curriculum-provider-text">
+                We can change our curriculum to fit your needs. Contact us using the form below and we can begin helping you.
+            </p>
+        </div>
+        <div class="curriculum-provider-item">
+            <img class="curriculum-provider-image" src="{% static 'home/images/curriculum-credibility.png' %}">
+            <h4 class="curriculum-provider-subtitle">Credibility</h4>
+            <p class="curriculum-provider-text">
+                Our curriculum is created by a large team of passionate Computer Scientists attending Singapore American School.
+            </p>
+        </div>
+        <div class="curriculum-provider-item">
+            <img class="curriculum-provider-image" src="{% static 'home/images/curriculum-product.png' %}">
+            <h4 class="curriculum-provider-subtitle">Project Based</h4>
+            <p class="curriculum-provider-text">
+                Throughout the curriculum, students will create their own projects and leave the program with cool end products.
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="general-dark-outer">
+<div class="curriculum-inner">
+    <h3 class="subtitle google-slides">
+         Take a look at one of our slides!
+    </h3>
+    <iframe class="google-slides-embed" src="https://docs.google.com/presentation/d/e/2PACX-1vR5oAx5APKCesDDpwGQpfQ5PHtH6qmGu_mbYwYok4xCl-36wg6xXQb90iZaPWB8cvc9ekKCQp0ljN4_/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+</div>
+</div>
+
+<div class="general-light-outer">
+<div class="contact-us-padding">
+    <h2 class="contact-us-subtitle">
+        Do you want to use our curriculum or learn more about it?
+    </h2>
+    <form action="{% url 'home:contact_view' %}" method="post">
+        {% csrf_token %}
+        <div class="contact-us-input">
+            <input type="text" name="fullname" placeholder="" required>
+            <p class="contact-us-placeholder">Full Name</p>
+        </div>
+        <div class="contact-us-input">
+            <input type="email" name="email" placeholder="" required>
+            <p class="contact-us-placeholder">Email Address</p>
+        </div>
+        <div class="contact-us-large-input">
+            <textarea name="enquiry" class="contact-us-textarea" placeholder="" required></textarea>
+            <p class="contact-us-placeholder">Enquiry</p>
+        </div>
+        <button class="contact-us-button" type="submit" value="send">
+            Submit
+        </button>
+    </form>
+</div>
+</div>
+
+<div class="general-blue-outer curriculum-java-outer">
+<div class="curriculum-java-sticky-wrapper">
+    <h2 class="subtitle curriculum-java-header">Java Level 1 Curriculum</h2>
+    <div class="curriculum-java-container">
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Intro, Basic Data Types</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-number">
+                    <h3>1</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Students and tutors will introduce themselves and learn about what an IDE is as well as basic syntax and coding concepts
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Strings & Printing</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>2</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Continue  learning of basic coding concepts such as ints, doubles, strings, booleans, and printing
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">If Statements, Loops</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>3</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Learn about simple if, if-else, and else statements as well as for and while loops.
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Basic Methods (Math, String)</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>4</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Learn about the necessary methods to learn from the Math class and String class. We will provide a method guide.
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Writing Methods</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>5</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Learn about how to write your own methods similar to ones learned from Math and String classes.
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Input</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>6</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Learn how to get input from the command line using Scanner. We will provide a guide for the Scanner methods.
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Review</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>7</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Review every single concept learned throughout the program in preparation for the final project.
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Project Introduction</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>8</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Learn about the requirements of the final project and start brainstorming ideas using exemplars.
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Project Worktime</h2>
+            <div class="curriculum-java-list">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>9</h3>
+                </div>
+                <div class="curriculum-java-line"></div>
+            </div>
+            <p class="curriculum-java-info">
+                    Use the lesson to work on your project using the skills you have learned throughout the program.
+            </p>
+        </div>
+        <div class="curriculum-java-item">
+            <h2 class="curriculum-java-subtitle">Presentation</h2>
+            <div class="curriculum-java-list end">
+                <div class="curriculum-java-line"></div>
+                <div class="curriculum-java-number">
+                    <h3>10</h3>
+                </div>
+            </div>
+            <p class="curriculum-java-info">
+                    Present your final project to your peers and parents and show off all your learning from the past 9 weeks.
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="general-light-outer curriculum-scratch-outer">
+<div class="curriculum-scratch-sticky-wrapper">
+    <h2 class="subtitle curriculum-scratch-header">Our Scratch Curriculum</h2>
+    <div class="curriculum-scratch-container">
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Intro, Scratch Tutorial</h2>
+            <div class="curriculum-scratch-list end">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>1</h3>
+                </div>
+            </div>
+            <p class="curriculum-scratch-info">
+                    Students and tutors will introduce themselves and learn about what the Scratch interface and explore this interface.
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Sprites</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>2</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                Continue to explore the Scratch interface and learn about what Scratch sprites are, including attributes, manipulation, and cloning.
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Coordinates/Sensing</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>3</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                    Learn about coordinates — x and y — and how to detect different events using sensing blocks
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Variables</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>4</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                    Learn about what variables are, how to create variables, and how to manipulate variables
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">If Statements/Operators</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>5</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                    Learn about if statements, if else statements, and operators that check if statements.
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Loops</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>6</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                    Learn about forever loops, repeat loops, and repeat until loops
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Method Writing</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>7</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                Learn about creating methods and how to implement them to make your code shorter
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Review</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>8</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                    Review all concepts learned throughout the program by creating a fun game that incorporates everything.
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Project Intro/Worktime</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-line"></div>
+                <div class="curriculum-scratch-number">
+                    <h3>9</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                    Learn about the requirements of the final project and start brainstorming ideas using exemplars.
+            </p>
+        </div>
+        <div class="curriculum-scratch-item">
+            <h2 class="curriculum-scratch-subtitle">Presentation</h2>
+            <div class="curriculum-scratch-list">
+                <div class="curriculum-scratch-number">
+                    <h3>10</h3>
+                </div>
+                <div class="curriculum-scratch-line"></div>
+            </div>
+            <p class="curriculum-scratch-info">
+                    Present your final project to your peers and parents and show off all your learning from the past 9 weeks.
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

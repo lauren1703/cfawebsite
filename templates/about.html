@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+
+        <div class="header about-header">
+            <div class="about-header-container">
+                <h1 class="title about-title">About Us</h1>
+                <h2 class="header-subtitle about-subtitle">Get to know our team and more about our club!</h2>
+            </div>
+        </div>
+
+        <div class="general-light-outer">
+            <div class="about-column-inner">
+                <div class="about-col">
+                    <div class="about-text-container">
+                        <h2 class="subtitle">What is Code For All</h2>
+                        <p class="normal">
+                            CFA is an entity that improves children’s technological knowledge. 
+                            At its core, the purpose of CFA is to meaningfully engage with youngs students 
+                            and equip them with basic technology and coding skills in order to spark a passion for coding.
+                            <br>
+                            <br>
+                            We are a service organization operating at Singapore American School and provide our services
+                            with different organizations. Please <a class="about-link" href="{% url "home:contact_view" %}">contact us</a> 
+                            if you are interested to work with us or have any questions
+                        </p>
+                    </div>
+                </div>
+                <div class="about-col about-col-image">
+                    <div class="about-image-container">
+                        <img src="{% static 'home/images/about_codeforall.jpg' %}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="general-dark-outer">
+            <h3 class="subtitle goals-subtitle">Our Goals</h3>
+            <div class="goals-container">
+                <div class="goals-container-item"> 
+                    <div class="goals-item-front">
+                        <img src="{% static 'home/images/about_goals_engage.png' %}"/>
+                    </div>
+                    <div class="goals-item-back">
+                        <p class="goals-text">
+                            Engaging Meaningfully
+                        </p>
+                    </div>
+                </div>
+                <div class="goals-container-item"> 
+                    <div class="goals-item-front">
+                        <img src="{% static 'home/images/about_goals_passion.png' %}"/>
+                    </div>
+                    <div class="goals-item-back">
+                        <p class="goals-text">
+                            Sparking Coding Passions
+                        </p>
+                    </div>
+                </div>
+                <div class="goals-container-item"> 
+                    <div class="goals-item-front">
+                        <img src="{% static 'home/images/about_goals_skills.png' %}"/>
+                    </div>
+                    <div class="goals-item-back">
+                        <p class="goals-text">
+                            Providing Life Skills
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="general-blue-outer">
+            <div class="about-us-content-inner">
+                <h2 class="subtitle-light">Mission</h2>
+                <p class="normal about-us-light">
+                    The mission of CFA is to provide a platform dedicated to empowering young kids with 
+                    computer science/coding skills. Additionally, CFA aims to spread awareness about the problem of 
+                    the digital divide.
+                </p>
+            </div>
+        </div>
+
+        <div class="general-light-outer profile-light-outer">
+            <div class="profile-content-inner">
+                <h2 class="subtitle profile">Our Team</h2>
+                
+                <div class="profile-container">
+                 <div class="profile-outer" onclick="">
+                    <div class="profile-inner"> 
+                        <div class="profile-image lauren">
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <h3 class="profile-name">Lauren Ah-Hot</h3>
+                        <h4 class="profile-pos">President </h4>
+                        <h4 class="profile-role">Project Manager/Head of Partnerships</h4>
+                    </div>
+                </div>
+                
+                <div class="profile-container">
+                    <div class="profile-outer" onclick="">
+                        <div class="profile-inner"> 
+                            <div class="profile-image andrew">
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="profile-name">Andrew Kim</h3>
+                            <h4 class="profile-pos">Vice President</h4>
+                            <h4 class="profile-role">Co-Head of Curriculum</h4>
+                        </div>
+                    </div>
+                    <div class="profile-outer" onclick="">
+                        <div class="profile-inner"> 
+                            <div class="profile-image ben">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">Benjamin Cheong</h3>
+                                <h4 class="profile-pos">Vice President</h4>
+                                <h4 class="profile-role">Co-Head of Curriculum</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-outer" onclick="">
+                        <div class="profile-inner"> 
+                            <div class="profile-image vivaan">
+                            </div>
+                        </div>
+                        <div class="profile-content" >
+                            <h3 class="profile-name">Vivaan Khushani</h3>
+                            <h4 class="profile-pos">Officer</h4>
+                            <h4 class="profile-role">Co-Head of Tutoring/Head of Technology/Head of Finances</h4>
+                        </div>
+                    </div>
+                    <div class="profile-outer" onclick="">
+                        <div class="profile-inner"> 
+                            <div class="profile-image jessie">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">Jessie Park</h3>
+                                <h4 class="profile-pos">Officer</h4>
+                                <h4 class="profile-role">Co-Head of Tutoring</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-outer" onclick="">
+                        <div class="profile-inner"> 
+                            <div class="profile-image zoravar">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">Zoravar Singh</h3>
+                                <h4 class="profile-pos">Officer</h4>
+                                <h4 class="profile-role">Co-head of Fundraising</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-outer" onclick="">
+                        <div class="profile-inner"> 
+                            <div class="profile-image christian">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">Christian Looi</h3>
+                                <h4 class="profile-pos">Officer</h4>
+                                <h4 class="profile-role">Co-head of Fundraising</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-outer" onclick="">
+                        <div class="profile-inner"> 
+                            <div class="profile-image chan">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">Chan Namgoong</h3>
+                                <h4 class="profile-pos">Officer</h4>
+                                <h4 class="profile-role">Curriculum</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endblock %}

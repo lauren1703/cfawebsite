@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!--Home page-->
+
+        <div class="header home-header">
+            <div class="home-header-container">
+                <h1 class="title home-title">Code For All</h1>
+                <h2 class="header-subtitle home-subtitle">Propelling the young to a bright future!</h2>
+                <a href="{% url "home:contact_view" %}">
+                    <button class="home-header-button" type="button">
+                        Partner Us
+                    </button>
+                </a>
+            </div>
+        </div>
+        
+        <video class="promo-vid" preload="auto" loop="loop" controls="controls autoplay">
+            <source src="{% static 'home/images/CFA Promo.mp4' %}" type="video/mp4">
+        </video>
+        
+        <div class="general-light-outer tutoring-slide-outer">
+            <div class="tutoring-slide-mask">
+            <div class="tutoring-slide-container">
+                
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-1.JPG' %}"/>
+                </div>
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-2.JPG' %}"/>
+                </div>
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-3.jpg' %}"/>
+                </div>
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-4.JPG' %}"/>
+                </div>
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-5.JPG' %}"/>
+                </div>
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-6.JPG' %}"/>
+                </div>
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-7.JPG' %}"/>
+                </div>
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-8.JPG' %}"/>
+                </div>
+                <div class="tutoring-slide">
+                    <img src="{% static 'home/images/tutoring-image-9.JPG' %}"/>
+                </div>
+                
+            </div>
+            </div>
+            
+            
+            <!-- Next and previous buttons -->
+            <div class="arrow prev" onclick="minusSlide()">
+                <span class="fa fa-angle-left tutoring-arrow">
+                    <span class="left-arrow-line"></span></span>
+              </div>`
+            <div class="arrow next" onclick="plusSlide()">
+                <span class="fa fa-angle-right tutoring-arrow">
+                    <span class="right-arrow-line"></span>
+                </span>
+              </div>
+        </div>
+
+
+        <div class="general-light-outer partnership-outer">
+            <div class="partnership-inner">
+                <p class="partnership-text"> Strategic partnership with </p>
+                <img class="partnership-image" src="{% static 'home/images/home_partnership.png' %}"/>
+            </div>
+        </div>
+
+
+        <div class="general-light-outer">
+            <div class="home-column-inner">
+                <div class="home-content-col">
+                    <div class="home-content-container">
+                        <h2 class="subtitle">What We Do</h2>
+                        <p class="normal" id="home-content-text">
+                            Code For All is here to encourage young 
+                            children to dive into the world of coding and ensure that they have a chance to be a part of the future.
+                            We provide them with basic technology and coding skills in order to spark a passion for
+                            coding.
+                        </p>
+                        <a class="normal home-about-link" href="{% url "home:about_view" %}">
+                            More About Us
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-image-col">
+                    <div class="general-image-container">
+                        <img src="{% static 'home/images/home_logo.JPG' %}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="general-light-outer">
+            <div class="curriculum-provider-inner">
+               <h3 class="subtitle provider">
+                    Our 3 Main Branches
+               </h3>
+                <div class="curriculum-provider-container">
+                    <div class="countries-provider-item">
+                        <img class="countries-provider-image" src="{% static 'home/images/singapore-circular.png' %}">
+                        <a href="{% url "home:about_view" %}" class="countries-provider-subtitle">Singapore</a>
+                    </div>
+                    <div class="countries-provider-item">
+                        <img class="countries-provider-image" src="{% static 'home/images/spain-circular.png' %}">
+                        <a href="{% url "home:madrid_view" %}" class="countries-provider-subtitle">Madrid</a>
+                    </div>
+                    <div class="countries-provider-item">
+                        <img class="countries-provider-image" src="{% static 'home/images/united-states-circular.svg.png' %}">
+                        <a href="{% url "home:detroit_view" %}" class="countries-provider-subtitle">Detroit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- why choose us><!-- comment -->
+        <div class="general-blue-outer">
+            <div class="choose-us-inner">
+                <div class="choose-us-text-col">
+                    <h2 class="choose-us-number">100</h2>
+                    <h2 class="choose-us-number-text" style="font-family: Nunito">Children Taught and Inspired to Code</h2>
+                    
+                    <h2 class="choose-us-number">50</h2>
+                    <h2 class="choose-us-number-text" style="font-family: Nunito">Experienced Computer Science Teachers</h2>
+                </div>
+                <div class="choose-us-col">
+                    <h2 class="choose-us-subtitle">We Provide</h2>
+
+                    <div class="choose-us-container">
+                        <div class="choose-us-item">
+                            <div class="choose-us-image-container">
+                                <img src="{% static 'home/images/home_icon_free.png' %}"/>
+                            </div>
+                            <h3 class="choose-us-text" style="font-family: Nunito">
+                                Free Tutoring Services
+                            </h3>
+                        </div>
+
+
+                        <div class="choose-us-item">
+                            <div class="choose-us-image-container">
+                                <img src="{% static 'home/images/home_icon_computer.png' %}"/>
+                            </div>
+                            <h3 class="choose-us-text" style="font-family: Nunito">
+                                Computers Provided
+                            </h3>
+                        </div>
+
+                        <div class="choose-us-item">
+                            <div class="choose-us-image-container">
+                                <img src="{% static 'home/images/home_icon_curriculum.png' %}"/>
+                            </div>
+                            <h3 class="choose-us-text" style="font-family: Nunito">
+                                Well-Developed Flexible Curriculum
+                            </h3>
+                        </div>
+
+                        <div class="choose-us-item">
+                            <div class="choose-us-image-container">
+                                <img src="{% static 'home/images/home_icon_tutor.png' %}"/>
+                            </div>
+                            <h3 class="choose-us-text" style="font-family: Nunito">
+                                Experienced CS Tutors
+                            </h3>
+                        </div>
+
+                        <div class="choose-us-item">
+                            <div class="choose-us-image-container">
+                                <img src="{% static 'home/images/home_icon_future.png' %}"/>
+                            </div>
+                            <h3 class="choose-us-text" style="font-family: Nunito">
+                                Bright Future for Children
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="general-dark-outer">
+            <div class="projects-inner">
+                <h2 class="subtitle">Our 3 main projects are</h2>
+                <div class="projects-container">
+
+                    <a href="{% url "home:curriculum_view" %}">
+                        <div class="projects-item-outer item-1">
+                            <div class="projects-image-container">
+                                <img class="projects-image" src="{% static 'home/images/home_icon_curriculum.png' %}"/>
+                                <span class="projects-image-background"/>
+                            </div>
+                            <div class="projects-item-container">
+                                <div class="projects-content-container">
+                                    <h3 class="projects-subtitle">
+                                        Curriculum
+                                    </h3>
+                                    <p class="projects-subtext">
+                                        A Java & Scratch 10 week curriculum that is both interactive and informative. 
+                                    </p>
+                                </div>
+                                <button class="projects-button">Learn More</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{% url "home:technology_view" %}">
+                        <div class="projects-item-outer item-2">
+                            <div class="projects-image-container">
+                                <img class="projects-image" src="{% static 'home/images/home_icon_codecorner.png' %}"/>
+                                <span class="projects-image-background"/>
+                            </div>
+                            <div class="projects-item-container">
+                                <div class="projects-content-container">
+                                    <h3 class="projects-subtitle">
+                                        Technology 
+                                    </h3>
+                                    <p class="projects-subtext">
+                                        A service dedicated to enabling children with computers and other technology.
+                                    </p>
+                                </div>
+                                <button class="projects-button">Learn More</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{% url "home:tutoring_view" %}">
+                        <div class="projects-item-outer item-3">
+                            <div class="projects-image-container">
+                                <img class="projects-image" src="{% static 'home/images/home_icon_tutoring.png' %}"/>
+                                <span class="projects-image-background"/>
+                            </div>
+                            <div class="projects-item-container">
+                                <div class="projects-content-container">
+                                    <h3 class="projects-subtitle">
+                                        Tutoring
+                                    </h3> 
+                                    <p class="projects-subtext">
+                                        Partnering with PPIS, we provide coding education to young children.
+                                    </p>
+                                </div>
+                                <button class="projects-button">Learn More</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="general-light-outer">
+            <div class="contact-us-padding">
+            <div class="contact-us-inner">
+                <h2 class="contact-us-subtitle">
+                    Do you want to co-operate and learn more about our platform or have any questions?
+                </h2>
+                <form action="{% url 'home:contact_view' %}" method="post">
+                    {% csrf_token %}
+                    <div class="contact-us-input">
+                        <input type="text" name="fullname" placeholder="" required>
+                        <p class="contact-us-placeholder">Full Name</p>
+                    </div>
+                    <div class="contact-us-input">
+                        <input type="email" name="email" placeholder="" required>
+                        <p class="contact-us-placeholder">Email Address</p>
+                    </div>
+                    <div class="contact-us-large-input">
+                        <textarea name="enquiry" class="contact-us-textarea" placeholder="" required></textarea>
+                        <p class="contact-us-placeholder">Enquiry</p>
+                    </div>
+                    <button class="contact-us-button" type="submit" value="send">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            </div>
+        </div>
+
+{% endblock %}

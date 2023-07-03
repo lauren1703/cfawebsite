@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Fundraising{% endblock %}
+
+{% block content %}
+<div class="header fundraising-header">
+    <div class="fundraising-header-container">
+        <h1 class="title fundraising-title">Fundraising</h1>
+        <h2 class="header-subtitle fundraising-subtitle">We raise funds from events and donations!</h2>
+    </div>
+</div>
+
+<div class="general-light-outer">
+    <div class="fundraising-column-inner">
+        <div class="fundraising-content-col">
+            <div class="fundraising-content-container">
+                <h2 class="subtitle">Funding</h2>
+                <p class="normal" id="fundraising-content-text">
+                    With our partnership with Li Foundation, we have received funding to carry out our programs. 
+                    <br>
+                    <br>
+                    Additionally, we host our own fundraising events at Singapore American School to independently raise funds as well as advertise our organization.
+                </p>
+            </div>
+        </div>
+        <div class="fundraising-image-col">
+            <div class="fundraising-image-container">
+                <img src="{% static 'home/images/fundraising-partner.png' %}"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="general-blue-outer">
+    <div class="fundraising-partner-inner">
+        <p class="fundraising-partnership-text">With our partnership with Li Foundation and our fundraising events, we have raised over</p>
+        <h2 class="fundraising-partnership-number">$10,000</h2>
+    </div>
+</div>
+
+<div class="general-dark-outer">
+    <div class="fundraising-events-inner">
+        <h3 class="subtitle">Here are examples of fundraising events we have held:</h3>
+        <div class="fundraising-events-container">
+             <div class="fundraising-object-outer">
+                <div class="fundraising-object">
+                    <div class="fundraising-cover">
+                        <h2 class="fundraising-cover-label">League of Legends Tournament <br> <span class="fundraising-read">$200</span> </h2>
+                    </div>
+                    <img src="{% static 'home/images/fundraising-event3.jpg' %}"/>
+                </div>
+            </div>
+            <div class="fundraising-object-outer">
+                <div class="fundraising-object">
+                    <div class="fundraising-cover">
+                        <h2 class="fundraising-cover-label">Valorant Tournament<br> <span class="fundraising-read">$200</span> </h2>
+                    </div>
+                    <img src="{% static 'home/images/fundraising-event2.jpg' %}"/>
+                </div>
+            </div>
+            <div class="fundraising-object-outer">
+                <div class="fundraising-object">
+                    <div class="fundraising-cover">
+                        <h2 class="fundraising-cover-label">Clash Royale Tournament<br> <span class="fundraising-read">$100</span> </h2>
+                    </div>
+                    <img src="{% static 'home/images/fundraising-event1.jpg' %}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

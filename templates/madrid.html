@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Madrid Branch{% endblock %}
+
+{% block content %}
+<div class="header madrid-header">
+    <div class="home-header-container">
+        <h1 class="title home-title">Code For All Madrid</h1>
+        <h2 class="header-subtitle home-subtitle">Learn about our sub branch in Madrid, Spain</h2>
+    </div>
+</div>
+
+<video class="promo-vid" preload="auto" loop="loop" controls="controls autoplay">
+    <source src="{% static 'home/images/madrid-video.mp4' %}" type="video/mp4">
+</video>
+
+<div class="general-light-outer tutoring-slide-outer">
+    <div class="tutoring-slide-mask">
+    <div class="tutoring-slide-container">
+        
+        <div class="tutoring-slide two">
+            <img src="{% static 'home/images/madrid-image-2.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide one">
+            <img src="{% static 'home/images/madrid-image-1.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide three">
+            <img src="{% static 'home/images/madrid-image-3.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide four">
+            <img src="{% static 'home/images/madrid-image-4.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide five">
+            <img src="{% static 'home/images/madrid-image-5.JPG' %}"/>
+        </div>
+            <div class="tutoring-slide six">
+            <img src="{% static 'home/images/madrid-image-6.JPG' %}"/>
+        </div>
+        
+    </div>
+    </div>
+    
+    
+    <!-- Next and previous buttons -->
+    <div class="arrow prev" onclick="minusSlide()">
+        <span class="fa fa-angle-left tutoring-arrow">
+            <span class="left-arrow-line"></span></span>
+      </div>
+    <div class="arrow next" onclick="plusSlide()">
+        <span class="fa fa-angle-right tutoring-arrow">
+            <span class="right-arrow-line"></span>
+        </span>
+      </div>
+</div>
+
+
+<div class="general-light-outer partnership-outer">
+    <div class="partnership-inner">
+        <p class="partnership-text"> Strategic partnership with </p>
+        <img class="partnership-image" src="{% static 'home/images/madrid_partnership.png' %}"/>
+    </div>
+</div>
+
+
+<div class="general-light-outer">
+    <div class="home-column-inner">
+        <div class="home-content-col">
+            <div class="home-content-container">
+                <h2 class="subtitle">What We Do</h2>
+                <p class="normal" id="home-content-text">
+                    Encouraging young children in Madrid to pursue coding through providing technology and tutoring. We also run fundraising and curriculum committees in the American School of Madrid.
+                </p>
+            </div>
+        </div>
+        <div class="home-image-col">
+            <div class="general-image-container">
+                <img src="{% static 'home/images/madrid-logo.png' %}"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="general-light-outer profile-light-outer">
+    <div class="profile-content-inner">
+        <h2 class="subtitle profile">Our Team</h2>
+    
+        <div class="profile-container">
+            <div class="profile-outer" onclick="">
+                <div class="profile-inner"> 
+                    <div class="profile-image daniel">
+                    </div>
+                </div>
+                <div class="profile-content">
+                    <h3 class="profile-name">Daniel Sheth</h3>
+                    <h4 class="profile-pos">Co-Director</h4>
+                </div>
+            </div>
+            
+        
+        <div class="profile-outer" onclick="">
+            <div class="profile-inner"> 
+                <div class="profile-image lucas">
+                </div>
+                <div class="profile-content">
+                    <h3 class="profile-name">Lucas Soden</h3>
+                    <h4 class="profile-pos">Co-Director</h4>
+                </div>
+            </div>
+        </div>
+            <div class="profile-outer" onclick="">
+                <div class="profile-inner"> 
+                    <div class="profile-image william">
+                    </div>
+                </div>
+                <div class="profile-content" >
+                    <h3 class="profile-name">William Cheng</h3>
+                    <h4 class="profile-pos">Photographer</h4>
+                </div>
+            </div>
+            <div class="profile-outer" onclick="">
+                <div class="profile-inner"> 
+                    <div class="profile-image guillermo">
+                    </div>
+                </div>
+                <div class="profile-content">
+                    <h3 class="profile-name">Guillermo</h3>
+                    <h4 class="profile-pos">Tutor</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Technology{% endblock %}
+
+{% block content %}
+<div class="header technology-header">
+    <div class="technology-header-container">
+        <h1 class="title technology-title">Technology</h1>
+        <h2 class="header-subtitle technology-subtitle">We provide free technology for all!</h2>
+    </div>
+</div>
+
+<div class="general-light-outer">
+    <div class="technology-column-inner">
+        <div class="technology-content-col">
+            <div class="technology-content-container">
+                <h2 class="subtitle">Computers</h2>
+                <p class="normal" id="technology-content-text">
+                    We have provided computers for children to use in our tutoring programs! The computers purchased for our program were chromebooks. We also work with Engineering Good to repair computers and distribute them to underprivileged families in Singapore.
+                    <br>
+                    <br>
+                    Please contact us if you want to connect
+                    or have any questions.
+                </p>
+                
+                 <a class="normal technology-about-link" href="{% url "home:contact_view" %}">
+                    Work with us
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="technology-image-col">
+            <div class="technology-image-container">
+                <img src="{% static 'home/images/technology-main-image.jpg' %}"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="general-light-outer">
+    <div class="technology-partner-inner">
+        <p class="technology-partnership-text">With our partnership with</p>
+        <img class="technology-partner-image" src="{% static 'home/images/technology-partner-image.png' %}"/>
+        <p class="technology-partnership-text">We are ready to help you with any computer problems you have!</p>
+    </div>
+</div>
+
+
+<div class="general-light-outer tutoring-slide-outer">
+    <div class="tutoring-slide-mask">
+    <div class="tutoring-slide-container">
+        
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/technology-image-1.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/technology-image-2.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/technology-image-3.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/technology-image-4.JPG' %}"/>
+        </div>
+        <div class="tutoring-slide">
+            <img src="{% static 'home/images/technology-image-5.JPG' %}"/>
+        </div>
+    </div>
+    </div>
+    
+    
+    <!-- Next and previous buttons -->
+    <div class="arrow prev" onclick="minusSlide()">
+        <span class="fa fa-angle-left tutoring-arrow">
+            <span class="left-arrow-line"></span></span>
+      </div>
+    <div class="arrow next" onclick="plusSlide()">
+        <span class="fa fa-angle-right tutoring-arrow">
+            <span class="right-arrow-line"></span>
+        </span>
+      </div>
+</div>
+
+<div class="general-dark-outer">
+    <div class="technology-column-inner-2">
+        <div class="technology-image-col">
+            <div class="technology-image-container">
+                <img src="{% static 'home/images/technology-computers.jpg' %}"/>
+            </div>
+        </div>
+        <div class="technology-content-col">
+            <div class="technology-content-container right">
+                <h2 class="subtitle">Check out these Computers!</h2>
+                <p class="normal" id="technology-content-text">
+                    Here you can see the CFA team setting up all our computers for our tutoring program with PPIS.
+                    <br>
+                    <br>
+                    Each computer comes with a bag, charging cable, and mouse. These are all given to the children we work with.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="general-light-outer">
+    <div class="contact-us-padding">
+        <h2 class="contact-us-subtitle">
+            Do you want to work with us?
+        </h2>
+        <form action="{% url 'home:contact_view' %}" method="post">
+            {% csrf_token %}
+            <div class="contact-us-input">
+                <input type="text" name="fullname" placeholder="" required>
+                <p class="contact-us-placeholder">Full Name</p>
+            </div>
+            <div class="contact-us-input">
+                <input type="email" name="email" placeholder="" required>
+                <p class="contact-us-placeholder">Email Address</p>
+            </div>
+            <div class="contact-us-large-input">
+                <textarea name="enquiry" class="contact-us-textarea" placeholder="" required></textarea>
+                <p class="contact-us-placeholder">Enquiry</p>
+            </div>
+            <button class="contact-us-button" type="submit" value="send">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
